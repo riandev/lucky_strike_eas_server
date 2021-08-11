@@ -394,9 +394,9 @@ client.connect((err) => {
       console.log(error);
     }
   });
-  // app.get("*", (req, res) => {
-  //   res.sendFile(path.join(__dirname, "../eas_client/build", "index.html"));
-  // });
+  app.get("/", (req, res) => {
+    res.send("Connected");
+  });
 });
 
 //app.get("/", (req, res) => {
