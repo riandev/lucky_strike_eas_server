@@ -7,7 +7,7 @@ const _ = require("lodash");
 const path = require("path");
 
 const app = express();
-app.use(express.static("../lucky_strick_eas_client/build"));
+app.use(express.static("../lucky_strike_eas_client/build"));
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false, limit: "5000mb" }));
 app.use(bodyParser.json({ limit: "5000mb" }));
@@ -396,7 +396,7 @@ client.connect((err) => {
   });
   app.get("*", (req, res) => {
     res.sendFile(
-      path.join(__dirname, "../lucky_strick_eas_client/build", "index.html")
+      path.join(__dirname, "../lucky_strike_eas_client/build", "index.html")
     );
   });
 });
